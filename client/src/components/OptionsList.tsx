@@ -1,4 +1,9 @@
 import type { QuizPhase } from '../types/quiz';
+import {
+  getOptionAriaLabel,
+  getOptionClassName,
+  handleOptionsListKeyDown,
+} from '../helpers/optionsListHelpers';
 
 interface OptionsListProps {
   options: string[];
@@ -7,27 +12,6 @@ interface OptionsListProps {
   correctIndex: number;
   phase: QuizPhase;
   onSelect: (index: number) => void;
-}
-
-function getOptionClassName(
-  index: number,
-  selectedIndex: number | null,
-  correctIndex: number,
-  phase: QuizPhase,
-): string {
-  const classes = ['options-list__option'];
-
-  if (phase === 'revealing') {
-    if (index === correctIndex) {
-      classes.push('options-list__option--correct');
-    } else if (index === selectedIndex) {
-      classes.push('options-list__option--incorrect');
-    }
-  } else if (index === selectedIndex) {
-    classes.push('options-list__option--selected');
-  }
-
-  return classes.join(' ');
 }
 
 export function OptionsList({
@@ -41,7 +25,12 @@ export function OptionsList({
   const isLocked = phase === 'revealing';
 
   return (
-    <ul className="options-list" role="list">
+    <ul
+      className="options-list"
+      role="group"
+      aria-label="Answer choices"
+      onKeyDown={(event) => handleOptionsListKeyDown(event, isLocked)}
+    >
       {options.map((option, index) => (
         <li key={`${optionKeyPrefix}-${index}`} className="options-list__item">
           <button
@@ -50,6 +39,7 @@ export function OptionsList({
             onClick={() => onSelect(index)}
             disabled={isLocked}
             aria-pressed={selectedIndex === index}
+            aria-label={getOptionAriaLabel(option, index, selectedIndex, correctIndex, phase)}
           >
             {option}
           </button>

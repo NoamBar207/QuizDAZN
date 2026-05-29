@@ -9,10 +9,19 @@ export function Timer({ timeLeft, durationSec = QUESTION_DURATION_SEC }: TimerPr
   const progress = Math.max(0, Math.min(100, (timeLeft / durationSec) * 100));
 
   return (
-    <div className="timer" aria-live="polite" aria-label={`${timeLeft} seconds remaining`}>
-      <span className="timer__value">{timeLeft}s</span>
-      <div className="timer__track" role="presentation" aria-hidden="true">
-        <div className="timer__fill" style={{ width: `${progress}%` }} />
+    <div className="timer">
+      <span className="timer__value" aria-live="polite" aria-atomic="true">
+        {timeLeft}s
+      </span>
+      <div
+        className="timer__track"
+        role="progressbar"
+        aria-valuenow={timeLeft}
+        aria-valuemin={0}
+        aria-valuemax={durationSec}
+        aria-label="Time remaining"
+      >
+        <div className="timer__fill" style={{ width: `${progress}%` }} aria-hidden="true" />
       </div>
     </div>
   );

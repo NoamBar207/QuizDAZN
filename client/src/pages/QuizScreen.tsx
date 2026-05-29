@@ -15,9 +15,12 @@ export function QuizScreen({ quiz }: QuizScreenProps) {
   }
 
   return (
-    <section className="quiz-screen" aria-live="polite">
+    <section
+      className="quiz-screen"
+      aria-label={`Question ${currentQuestionIndex + 1} of ${questions.length}`}
+    >
       <header className="quiz-screen__header">
-        <span className="quiz-screen__progress">
+        <span className="quiz-screen__progress" aria-hidden="true">
           Question {currentQuestionIndex + 1} of {questions.length}
         </span>
         <Timer timeLeft={quiz.timeLeft} />

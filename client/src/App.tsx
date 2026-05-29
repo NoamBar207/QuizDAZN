@@ -1,6 +1,6 @@
 import { StartScreen } from './pages/StartScreen';
-import { QuizPlay } from './pages/QuizPlay';
 import { QuizScreen } from './pages/QuizScreen';
+import { ResultsScreen } from './pages/ResultsScreen';
 import { useQuiz } from './hooks/useQuiz';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
             errorMessage={quiz.errorMessage}
           />
         ) : quiz.phase === 'results' ? (
-          <QuizPlay quiz={quiz} />
+          <ResultsScreen quiz={quiz} />
         ) : (
           <QuizScreen quiz={quiz} />
         )}
