@@ -1,0 +1,122 @@
+[
+  {
+    "question": "What famous Roman general and statesman was assassinated on the Ides of March in 44 BC?",
+    "correctIndex": 0,
+    "options": ["Julius Caesar", "Augustus", "Brutus", "Pompey"],
+    "hint": "He was also a renowned military commander."
+  },
+  {
+    "question": "What was the name of the ancient Roman currency?",
+    "correctIndex": 1,
+    "options": ["Sestertius", "Denarius", "Aureus"],
+    "hint": "It was a silver coin."
+  },
+  {
+    "question": "What famous building in Rome was originally built as a stadium for chariot races and other public events?",
+    "correctIndex": 1,
+    "options": ["The Colosseum", "Circus Maximus", "Pantheon", "Forum Romanum"],
+    "hint": "It could hold up to 250,000 spectators."
+  },
+  {
+    "question": "What famous Roman emperor built a wall in northern Britain to protect against Scottish tribes?",
+    "correctIndex": 0,
+    "options": ["Hadrian", "Constantine", "Trajan", "Augustus"],
+    "hint": "The wall is named after him."
+  },
+  {
+    "question": "What was the name of the first Roman emperor?",
+    "correctIndex": 3,
+    "options": ["Julius Caesar", "Tiberius", "Caligula", "Augustus"],
+    "hint": "He was the nephew of Julius Caesar."
+  },
+  {
+    "question": "What was the name of the famous Roman road that ran from Rome to Brindisi?",
+    "correctIndex": 2,
+    "options": ["Via Appia", "Via Flaminia", "Via Traiana", "Via Aurelia"],
+    "hint": "It was also known as the Appian Way."
+  },
+  {
+    "question": "What was the name of the famous Roman physician who wrote a famous medical text known as the 'Canon'?",
+    "correctIndex": 3,
+    "options": ["Galen", "Hippocrates", "Aristotle", "Avicenna"],
+    "hint": "He was born in Persia (modern-day Iran)."
+  },
+  {
+    "question": "What was the name of the famous Roman philosopher who wrote 'Meditations'?",
+    "correctIndex": 0,
+    "options": ["Marcus Aurelius", "Epictetus", "Plato"],
+    "hint": "He was also a Roman emperor."
+  },
+  {
+    "question": "What was the name of the ancient Roman festival of Saturnalia?",
+    "correctIndex": 0,
+    "options": ["Saturnalia", "Lupercalia", "Fornacalia", "Consualia"],
+    "hint": "It was held in honor of the god Saturn."
+  },
+  {
+    "question": "What was the name of the famous Roman poet who wrote the epic poem 'The Aeneid'?",
+    "correctIndex": 1,
+    "options": ["Horace", "Virgil", "Ovid"],
+    "hint": "He lived during the reign of Augustus."
+  },
+  {
+    "question": "What was the name of the famous Roman statesman and orator known for his speeches against Mark Antony?",
+    "correctIndex": 2,
+    "options": ["Cato the Elder", "Marcus Licinius Crassus", "Cicero", "Lucius Cornelius Sulla"],
+    "hint": "He was one of Rome's greatest orators."
+  },
+  {
+    "question": "What was the name of the ancient Roman goddess of love and beauty?",
+    "correctIndex": 1,
+    "options": ["Juno", "Venus"],
+    "hint": "She was the mother of Cupid."
+  },
+  {
+    "question": "What was the name of the famous Roman commander who defeated the Carthaginian general Hannibal in the Second Punic War?",
+    "correctIndex": 3,
+    "options": ["Scipio Africanus", "Julius Caesar", "Pompey", "Fabius Maximus"],
+    "hint": "He was also known as Scipio the Elder."
+  },
+  {
+    "question": "What was the name of the famous Roman historian who wrote 'The Histories'?",
+    "correctIndex": 0,
+    "options": ["Tacitus", "Livy", "Suetonius"],
+    "hint": "He lived during the reigns of several emperors, including Nero and Trajan."
+  },
+  {
+    "question": "What was the name of the famous Roman emperor who famously said 'I found Rome a city of bricks and left it a city of marble'?",
+    "correctIndex": 2,
+    "options": ["Augustus", "Nero", "Titus", "Vespasian"],
+    "hint": "He ruled from 14 AD to 37 AD."
+  },
+  {
+    "question": "What was the name of the famous Roman general who defeated the Greek city-state of Corinth in 146 BC and sacked the city?",
+    "correctIndex": 1,
+    "options": ["Pompey", "Lucius Mummius", "Gnaeus Domitius Ahenobarbus", "Scipio Aemilianus"],
+    "hint": "He was also known for his patronage of the arts."
+  },
+  {
+    "question": "What was the name of the famous Roman emperor who issued the Edict of Milan, which granted religious tolerance to Christians in the Roman Empire?",
+    "correctIndex": 3,
+    "options": ["Trajan", "Hadrian", "Constantine", "Nero"],
+    "hint": "He was also known for his military campaigns in the east."
+  },
+  {
+    "question": "What was the name of the famous Roman general who was defeated by Hannibal at the Battle of Cannae in 216 BC?",
+    "correctIndex": 1,
+    "options": ["Scipio Africanus", "Lucius Aemilius Paullus", "Publius Cornelius Scipio", "Gaius Flaminius"],
+    "hint": "He was known for his innovative military tactics."
+  },
+  {
+    "question": "What was the name of the famous Roman poet who wrote the 'Metamorphoses'?",
+    "correctIndex": 2,
+    "options": ["Lucretius", "Catullus", "Ovid"],
+    "hint": "He was exiled by the Roman emperor Augustus."
+  },
+  {
+    "question": "What was the name of the famous Roman general who defeated the Egyptian forces of Cleopatra and Mark Antony in the Battle of Actium in 31 BC?",
+    "correctIndex": 0,
+    "options": ["Octavian (Augustus)", "Julius Caesar"],
+    "hint": "He became the first Roman emperor."
+  }
+]
