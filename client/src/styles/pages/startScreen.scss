@@ -1,30 +1,17 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/placeholders' as *;
 
 .start-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1.25rem;
-  padding: 2.5rem 1.5rem;
-  flex: 1;
+  @extend %screen-centered;
 
   &__ornament {
-    font-family: var(--font-display);
-    font-size: 0.875rem;
-    letter-spacing: 0.35em;
-    color: var(--color-gold);
-    opacity: 0.85;
+    @extend %ornament;
   }
 
   &__title {
-    margin: 0;
-    font-family: var(--font-display);
+    @extend %heading-display;
     font-size: clamp(2rem, 5vw, 2.75rem);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--color-text-heading);
   }
 
   &__subtitle {
@@ -32,52 +19,15 @@
     max-width: 28rem;
     font-size: 1.05rem;
     line-height: 1.55;
-    color: var(--color-text-muted);
+    color: $color-text-muted;
   }
 
   &__error {
-    margin: 0;
-    max-width: 28rem;
-    padding: 0.75rem 1rem;
-    border-radius: var(--radius-sm);
-    background: var(--color-error-bg);
-    border: 1px solid var(--color-error-border);
-    color: var(--color-error-text);
-    font-size: 0.95rem;
+    @extend %error-banner;
   }
 
   &__button {
+    @include btn-primary;
     margin-top: 0.5rem;
-    min-width: 11rem;
-    padding: 0.85rem 2rem;
-    border: 2px solid var(--color-crimson-dark);
-    border-radius: var(--radius-sm);
-    background: linear-gradient(180deg, var(--color-crimson) 0%, var(--color-crimson-dark) 100%);
-    color: var(--color-marble);
-    font-family: var(--font-body);
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    transition:
-      transform 0.15s ease,
-      box-shadow 0.15s ease,
-      opacity 0.15s ease;
-    box-shadow: var(--shadow-button);
-
-    &:hover:not(:disabled) {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-button-hover);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-gold);
-      outline-offset: 3px;
-    }
-
-    &:disabled {
-      opacity: 0.75;
-      cursor: wait;
-    }
   }
 }

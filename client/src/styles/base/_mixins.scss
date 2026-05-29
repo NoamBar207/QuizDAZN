@@ -1,0 +1,39 @@
+@use './variables' as *;
+
+@mixin focus-ring($offset: 3px) {
+  outline: 2px solid $color-gold;
+  outline-offset: $offset;
+}
+
+@mixin btn-primary {
+  min-width: 11rem;
+  padding: 0.85rem 2rem;
+  border: 2px solid $color-primary-dark;
+  border-radius: $radius-sm;
+  background: linear-gradient(180deg, $color-primary 0%, $color-primary-dark 100%);
+  color: $color-marble;
+  font-family: $font-body;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+  box-shadow: $shadow-button;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: $shadow-button-hover;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: wait;
+  }
+}

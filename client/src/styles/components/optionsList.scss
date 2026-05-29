@@ -1,9 +1,5 @@
 @use '../base/variables' as *;
 
-$option-height: 3rem;
-$option-gap: 0.65rem;
-$options-slot-rows: 4;
-
 .options-list {
   list-style: none;
   margin: 0;
@@ -12,51 +8,56 @@ $options-slot-rows: 4;
   flex-direction: column;
   justify-content: center;
   gap: $option-gap;
-  flex: 1;
-  min-height: calc(#{$options-slot-rows} * #{$option-height} + (#{$options-slot-rows} - 1) * #{$option-gap});
+  height: $options-slot-height;
+  flex-shrink: 0;
 
   &__item {
-    flex-shrink: 0;
+    flex: 0 0 $option-height;
   }
 
   &__option {
     width: 100%;
-    min-height: $option-height;
-    padding: 0.85rem 1rem;
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    background: var(--color-surface);
-    color: var(--color-text);
-    font-family: var(--font-body);
+    height: 100%;
+    padding: 0 1rem;
+    border: 2px solid $color-border;
+    border-radius: $radius-sm;
+    background: $color-surface;
+    color: $color-text;
+    font-family: $font-body;
     font-size: 1rem;
+    line-height: 1.25;
     text-align: left;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
     transition:
       border-color 0.15s ease,
       background-color 0.15s ease;
 
     &:hover:not(:disabled) {
-      border-color: var(--color-gold);
+      border-color: $color-gold;
+      background: $color-marble;
     }
 
     &:focus-visible {
-      outline: 2px solid var(--color-gold);
+      outline: 2px solid $color-gold;
       outline-offset: 2px;
     }
 
     &--selected {
-      border-color: var(--color-crimson);
-      background: rgba(139, 26, 26, 0.08);
+      border-color: $color-primary;
+      background: rgba(76, 42, 110, 0.08);
     }
 
     &--correct {
-      border-color: #2d6a3e;
-      background: rgba(45, 106, 62, 0.12);
+      border-color: $color-success;
+      background: $color-success-bg;
     }
 
     &--incorrect {
-      border-color: var(--color-crimson-dark);
-      background: var(--color-error-bg);
+      border-color: $color-error;
+      background: $color-error-bg;
     }
 
     &:disabled {

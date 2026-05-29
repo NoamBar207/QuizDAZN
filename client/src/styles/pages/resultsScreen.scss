@@ -1,40 +1,25 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../base/placeholders' as *;
 
 .results-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1.25rem;
-  flex: 1;
-  min-height: 28rem;
-  padding: 2.5rem 1.5rem;
+  @extend %screen-centered;
 
   &__ornament {
-    font-family: var(--font-display);
-    font-size: 0.875rem;
-    letter-spacing: 0.35em;
-    color: var(--color-gold);
-    opacity: 0.85;
+    @extend %ornament;
   }
 
   &__heading {
-    margin: 0;
-    font-family: var(--font-display);
+    @extend %heading-display;
     font-size: clamp(1.75rem, 4vw, 2.25rem);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--color-text-heading);
 
     &:focus {
       outline: none;
     }
 
     &:focus-visible {
-      outline: 2px solid var(--color-gold);
-      outline-offset: 4px;
-      border-radius: var(--radius-sm);
+      @include focus-ring(4px);
+      border-radius: $radius-sm;
     }
   }
 
@@ -49,40 +34,16 @@
     margin: 0;
     font-size: 1.05rem;
     line-height: 1.5;
-    color: var(--color-text);
+    color: $color-text;
 
     strong {
       font-weight: 700;
-      color: var(--color-text-heading);
+      color: $color-text-heading;
     }
   }
 
   &__button {
+    @include btn-primary;
     margin-top: 0.5rem;
-    min-width: 11rem;
-    padding: 0.85rem 2rem;
-    border: 2px solid var(--color-crimson-dark);
-    border-radius: var(--radius-sm);
-    background: linear-gradient(180deg, var(--color-crimson) 0%, var(--color-crimson-dark) 100%);
-    color: var(--color-marble);
-    font-family: var(--font-body);
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    cursor: pointer;
-    transition:
-      transform 0.15s ease,
-      box-shadow 0.15s ease;
-    box-shadow: var(--shadow-button);
-
-    &:hover {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-button-hover);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--color-gold);
-      outline-offset: 3px;
-    }
   }
 }

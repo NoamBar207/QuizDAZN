@@ -1,30 +1,41 @@
-// Roman-inspired palette
-$color-marble: #f5f0e6;
-$color-marble-dark: #e8dfd0;
-$color-surface: #faf6ef;
-$color-crimson: #8b1a1a;
-$color-crimson-dark: #6b1212;
-$color-gold: #c9a227;
-$color-gold-muted: #a8841f;
-$color-text: #2c2416;
-$color-text-heading: #1a1208;
-$color-text-muted: #5c4f3a;
-$color-border: #c4b59a;
-$color-error-bg: #fce8e8;
-$color-error-border: #d4a0a0;
-$color-error-text: #6b1212;
+// Marble & imperial palette
+$color-marble: #faf9f6;
+$color-marble-dark: #f3f1ec;
+$color-surface: #ffffff;
+$color-primary: #4c2a6e;
+$color-primary-dark: #3d2159;
+$color-gold: #b8941f;
+$color-gold-muted: #9a7d1a;
+$color-text: #1e293b;
+$color-text-heading: #0f172a;
+$color-text-muted: #64748b;
+$color-border: #e2ddd4;
+$color-success: #15803d;
+$color-success-bg: rgba(21, 128, 61, 0.1);
+$color-error-bg: #fef2f2;
+$color-error-border: #fecaca;
+$color-error-text: #991b1b;
+$color-error: #b91c1c;
 
-$font-display: 'Georgia', 'Times New Roman', serif;
-$font-body: system-ui, 'Segoe UI', Roboto, sans-serif;
+$font-display: 'Cinzel', Georgia, 'Times New Roman', serif;
+$font-body: 'Inter', system-ui, 'Segoe UI', sans-serif;
 
 $radius-sm: 6px;
 $radius-lg: 12px;
 
 $shadow-shell:
-  0 4px 24px rgba(44, 36, 22, 0.12),
-  0 0 0 1px rgba(201, 162, 39, 0.15);
-$shadow-button: 0 2px 8px rgba(107, 18, 18, 0.35);
-$shadow-button-hover: 0 4px 14px rgba(107, 18, 18, 0.45);
+  0 4px 24px rgba(15, 23, 42, 0.08),
+  0 0 0 1px rgba(184, 148, 31, 0.12);
+$shadow-button: 0 2px 8px rgba(61, 33, 89, 0.28);
+$shadow-button-hover: 0 4px 14px rgba(61, 33, 89, 0.38);
 
 $shell-max-width: 640px;
+$shell-min-height: 39rem;
+$hint-slot-height: 5.75rem;
+$option-height: 3.25rem;
+$option-gap: 0.65rem;
+$options-max-count: 4;
+$options-slot-height: calc(
+  #{$options-max-count} * #{$option-height} + (#{$options-max-count} - 1) * #{$option-gap}
+);
 $breakpoint-sm: 480px;
