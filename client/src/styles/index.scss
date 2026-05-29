@@ -1,0 +1,8 @@
+@use './base/global';
+@use './base/app';
+@use './pages/startScreen';
+@use './pages/quizScreen';
+@use './pages/quizPlay';
+@use './components/timer';
+@use './components/questionCard';
+@use './components/optionsList';

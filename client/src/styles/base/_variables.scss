@@ -1,0 +1,30 @@
+// Roman-inspired palette
+$color-marble: #f5f0e6;
+$color-marble-dark: #e8dfd0;
+$color-surface: #faf6ef;
+$color-crimson: #8b1a1a;
+$color-crimson-dark: #6b1212;
+$color-gold: #c9a227;
+$color-gold-muted: #a8841f;
+$color-text: #2c2416;
+$color-text-heading: #1a1208;
+$color-text-muted: #5c4f3a;
+$color-border: #c4b59a;
+$color-error-bg: #fce8e8;
+$color-error-border: #d4a0a0;
+$color-error-text: #6b1212;
+
+$font-display: 'Georgia', 'Times New Roman', serif;
+$font-body: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+$radius-sm: 6px;
+$radius-lg: 12px;
+
+$shadow-shell:
+  0 4px 24px rgba(44, 36, 22, 0.12),
+  0 0 0 1px rgba(201, 162, 39, 0.15);
+$shadow-button: 0 2px 8px rgba(107, 18, 18, 0.35);
+$shadow-button-hover: 0 4px 14px rgba(107, 18, 18, 0.45);
+
+$shell-max-width: 640px;
+$breakpoint-sm: 480px;

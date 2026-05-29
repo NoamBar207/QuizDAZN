@@ -2,9 +2,10 @@
   "name": "ancient-rome-quiz",
   "private": true,
   "scripts": {
+    "start": "concurrently -n server,client -c blue,green \"npm run dev:server\" \"npm run dev:client\"",
     "dev:client": "npm run dev --prefix client",
     "dev:server": "npm run dev --prefix server",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev": "npm start",
     "install:all": "npm install && npm install --prefix client && npm install --prefix server"
   },
   "devDependencies": {
